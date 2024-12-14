@@ -1,0 +1,128 @@
+/* MainFooter.css */
+
+.main-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-section {
+  margin: 1rem 0;
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-section h2, .footer-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00bcd4;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bcd4;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  border-top: 1px solid #444;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Additional Vertical Columns for Professional Look */
+.footer-section.services {
+  text-align: left;
+}
+
+.footer-section.services ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section.address {
+  text-align: left;
+}
+
+.footer-section.address p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-section.newsletter {
+  text-align: left;
+}
+
+.footer-section.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-section.newsletter input[type="email"] {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.footer-section.newsletter button {
+  padding: 0.8rem;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-section.newsletter button:hover {
+  background-color: #008c9e;
+}

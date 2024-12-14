@@ -75,3 +75,23 @@
     width: 100%;
     height: 100%;
 }
+@media (max-width: 640px) {
+    .hero-title > h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    .image-container {
+      width: 95%;
+      height: 25rem;
+    }
+    .stats {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    
+  }
+
+  .h-menu {
+    z-index: 1000; /* Higher than hero-wrapper */
+  }
+  
