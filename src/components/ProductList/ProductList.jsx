@@ -4,7 +4,7 @@ import products from "../../utils/products.json";
 import "./ProductList.css"; // Importing the styles
 
 const ProductList = () => {
-  const [visibleItems, setVisibleItems] = useState(4); // Initially show 4 items
+  const [visibleItems, setVisibleItems] = useState(3); // Initially show 3 items
   const [showMore, setShowMore] = useState(true); // To toggle Show More/Show Less
 
   const handleDetailsClick = (product) => {
@@ -20,7 +20,7 @@ const ProductList = () => {
     if (showMore) {
       setVisibleItems(products.length); // Show all items
     } else {
-      setVisibleItems(4); // Show only 4 items
+      setVisibleItems(3); // Show only 3 items
     }
     setShowMore(!showMore); // Toggle the button state
   };

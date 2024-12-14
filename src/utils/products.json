@@ -42,42 +42,42 @@
     "description": "Trendy sneakers to complement your everyday outfits."
   },
   {
-    "id": "1",
+    "id": "7",
     "image": "/images/card-image2.jpg",
     "title": "Stylish Running Shoes",
     "price": "120",
     "description": "Comfortable and lightweight shoes perfect for running and casual wear."
   },
   {
-    "id": "2",
+    "id": "8",
     "image": "/images/card-image6.jpg",
     "title": "Casual Sneakers",
     "price": "85",
     "description": "Trendy sneakers to complement your everyday outfits."
   },
   {
-    "id": "3",
+    "id": "9",
     "image": "/images/card-image5.jpg",
     "title": "Classic Sports Shoes",
     "price": "99",
     "description": "Durable and stylish sports shoes for outdoor and gym activities."
   },
   {
-    "id": "4",
+    "id": "10",
     "image": "/images/card-image2.jpg",
     "title": "Casual Sneakers",
     "price": "85",
     "description": "Trendy sneakers to complement your everyday outfits."
   },
   {
-    "id": "5",
+    "id": "11",
     "image": "/images/card-image3.jpg",
     "title": "Casual Sneakers",
     "price": "85",
     "description": "Trendy sneakers to complement your everyday outfits."
   },
   {
-    "id": "6",
+    "id": "12",
     "image": "/images/card-image1.jpg",
     "title": "Casual Sneakers",
     "price": "85",

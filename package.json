@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "framer-motion": "^10.8.5",
+    "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-accessible-accordion": "^5.0.0",
     "react-countup": "^6.4.2",

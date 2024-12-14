@@ -1,3 +1,5 @@
+// src/App.jsx
+import { CartProvider } from "./components/CartContext/CartContext";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Companies from "./components/Companies/Companies";
@@ -6,23 +8,26 @@ import GetStarted from "./components/GetStarted/GetStarted";
 import Footer from "./components/Footer/Footer";
 import MainFooter from "./components/MainFooter/MainFooter";
 import ProductList from "./components/ProductList/ProductList";
-// import TestComponent from "./components/TestComponent/TestComponent";
+import Cart from "./components/Cart/Cart";
+
 function App() {
   return (
-    <div className="App">
-      <div>
-        <div className="white-gradient" />
-        <Header />
-        <Hero />
+    <CartProvider>
+      <div className="App">
+        <div>
+          <div className="white-gradient" />
+          <Header />
+          <Hero />
+        </div>
+        <Companies />
+        <Residencies />
+        <ProductList />
+        <Cart />
+        <GetStarted />
+        <Footer />
+        <MainFooter />
       </div>
-      <Companies />
-      <Residencies />
-      <ProductList/>
-      {/* <TestComponent/> */}
-      <GetStarted />
-      <Footer/>
-      <MainFooter/>
-    </div>
+    </CartProvider>
   );
 }
 
