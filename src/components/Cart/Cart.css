@@ -1,17 +1,6 @@
 /* src/components/Cart/Cart.css */
 
-.cart-wrapper {
-    padding: 2rem;
-  }
-  
-  .cart-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .cart-items {
+.cart-items {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -20,22 +9,21 @@
   .cart-item {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background: white;
     border-radius: 10px;
     box-shadow: var(--shadow);
     position: relative;
     gap: 2rem;
+    width: 100%;
   }
   
-  .cart-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-  }
-  
-  .item-details {
-    flex: 1;
+  .empty-cart {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
   }
   
   .quantity-controls {
@@ -46,93 +34,15 @@
   }
   
   .quantity-controls button {
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--primary);
-    background: white;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .delete-icon, .heart-icon {
-    cursor: pointer;
-    color: var(--primary);
-  }
-  
-  .delete-icon {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-  }
-  
-  .heart-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-  
-  .cart-summary {
-    background: #f5f5f5;
-    padding: 1.5rem;
-    border-radius: 10px;
-    height: fit-content;
-  }
-  
-  .coupon-section {
-    margin-bottom: 2rem;
-  }
-  
-  .coupon-section input {
-    width: 100%;
-    padding: 0.8rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .summary-details {
+    padding: 0.5rem 1rem;
+    min-width: 40px;
+    height: 40px;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
   }
   
-  .summary-row {
-    display: flex;
-    justify-content: space-between;
-    color: var(--primary);
-  }
-  
-  .total {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ddd;
-  }
-  
-  .savings {
-    color: green;
+  .quantity-controls span {
+    min-width: 30px;
     text-align: center;
-    margin: 1rem 0;
-  }
-  
-  @media (max-width: 768px) {
-    .cart-container {
-      grid-template-columns: 1fr;
-    }
-    
-    .cart-item {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .delete-icon {
-      top: 0.5rem;
-      left: 0.5rem;
-    }
-    
-    .heart-icon {
-      top: 0.5rem;
-      right: 0.5rem;
-    }
   }

@@ -12,8 +12,7 @@ const Cart = () => {
   };
 
   const calculateDiscount = () => {
-    // Example discount logic
-    return 200;
+    return 200; // Example discount
   };
 
   return (
@@ -22,11 +21,11 @@ const Cart = () => {
       
       <div className="cart-container">
         <div className="cart-items">
-          {cartItems.map((item) => (
-            <div key={item.id} className="cart-item">
+          {cartItems.map((item, index) => (
+            <div key={`${item.id}-${item.title}-${index}`} className="cart-item">
               <Trash2 
                 className="delete-icon" 
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => removeFromCart(item.id, item.title)}
               />
               <img src={item.image} alt={item.title} />
               
@@ -35,42 +34,56 @@ const Cart = () => {
                 <p className="secondaryText">Price: ${item.price}</p>
                 
                 <div className="quantity-controls">
-                  <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                  <button 
+                    onClick={() => updateQuantity(item.id, item.title, item.quantity - 1)}
+                    className="button"
+                  >-</button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                  <button 
+                    onClick={() => updateQuantity(item.id, item.title, item.quantity + 1)}
+                    className="button"
+                  >+</button>
                 </div>
               </div>
               
               <Heart className="heart-icon" />
             </div>
           ))}
+
+          {cartItems.length === 0 && (
+            <div className="empty-cart">
+              <p className="secondaryText">Your cart is empty</p>
+            </div>
+          )}
         </div>
 
-        <div className="cart-summary">
-          <div className="summary-details">
-            <h2>Summary</h2>
-            <div className="summary-row">
-              <span>Sub-total:</span>
-              <span>${calculateSubtotal()}</span>
+        {cartItems.length > 0 && (
+          <div className="cart-summary">
+            <div className="summary-details">
+              <h2>Summary</h2>
+              <div className="summary-row">
+                <span>Sub-total:</span>
+                <span>${calculateSubtotal().toFixed(2)}</span>
+              </div>
+              <div className="summary-row">
+                <span>Discount:</span>
+                <span>-${calculateDiscount()}</span>
+              </div>
+              <div className="summary-row">
+                <span>Estimated Delivery & Handling:</span>
+                <span>Free</span>
+              </div>
+              <div className="summary-row total">
+                <span>Total:</span>
+                <span>${(calculateSubtotal() - calculateDiscount()).toFixed(2)}</span>
+              </div>
+              <div className="savings">
+                You saved ${calculateDiscount()}
+              </div>
+              <button className="button">Place Order</button>
             </div>
-            <div className="summary-row">
-              <span>Discount:</span>
-              <span>-${calculateDiscount()}</span>
-            </div>
-            <div className="summary-row">
-              <span>Estimated Delivery & Handling:</span>
-              <span>Free</span>
-            </div>
-            <div className="summary-row total">
-              <span>Total:</span>
-              <span>${calculateSubtotal() - calculateDiscount()}</span>
-            </div>
-            <div className="savings">
-              You saved ${calculateDiscount()}
-            </div>
-            <button className="button">Place Order</button>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
